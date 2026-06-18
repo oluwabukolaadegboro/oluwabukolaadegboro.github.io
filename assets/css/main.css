@@ -3031,29 +3031,46 @@ input, select, textarea {
 	}
 
 	.news-more {
-		margin-top: 1em;
+		margin-top: 1.5em;
 	}
-
-	.news-more summary {
-		cursor: pointer;
-		color: #49bf9d;
-		font-weight: 400;
-		border: solid 2px #49bf9d;
-		border-radius: 0.35em;
-		display: inline-block;
-		padding: 0.4em 1em;
-	}
-
-	.news-more summary:hover {
-		background: rgba(73, 191, 157, 0.1);
-	}
-
-	.news-more ul {
-		margin-top: 1em;
-	}
-
-
 	
+	.news-more summary {
+		list-style: none;
+		cursor: pointer;
+		text-align: center;
+		width: 220px;
+		margin: 0 auto;
+		padding: 0.75em 1.5em;
+		border-radius: 30px;
+		border: 2px solid #49bf9d;
+		color: #49bf9d;
+		font-weight: 600;
+		transition: all 0.3s ease;
+	}
+	
+	.news-more summary::-webkit-details-marker {
+		display: none;
+	}
+	
+	.news-more summary:hover {
+		background: #49bf9d;
+		color: white;
+	}
+	
+	.news-more[open] summary {
+		margin-bottom: 2em;
+	}
+	
+	.news-more[open] summary::after {
+		content: " ▲";
+	}
+	
+	.news-more summary::after {
+		content: " ▼";
+	}
+
+
+
 
 /* XLarge */
 
